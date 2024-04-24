@@ -36,6 +36,8 @@ const SignupPage = () => {
 
   const [currentMeme, setCurrentMeme] = useState(memes.welcomeMeme);
 
+  const[message,setMessage]=useState("")
+
 
 
   const handleNameChange = (event) => {
@@ -44,11 +46,13 @@ const SignupPage = () => {
     const regex = /^[a-zA-Z ]+$/;
     if (name === "") {
       setCurrentMeme(memes.emptyEmail);
+      setMessage("Apna  Naamhazoor likho");
     } else if (!regex.test(name)) {
       setCurrentMeme(memes.incorrectName);
+      setMessage("Special characters na dall bhaee");
     } else {
-
       setCurrentMeme(memes.correctName);
+      setMessage("Good Ho gya bhaee");
     }
   };
 
@@ -59,12 +63,14 @@ const SignupPage = () => {
 
     if (email.trim() === "") {
       setCurrentMeme(memes.emptyEmail);
+      setMessage("Email likh naw");
 
     } else if (validEmail(email)) {
-
+       setMessage("Khara kamm ker gya ay")
       setCurrentMeme(memes.correctEmail);
     } else {
       setCurrentMeme(memes.incorrectEmail);
+      setMessage("Galat Format Dalta hai")
     }
   };
 
@@ -73,12 +79,15 @@ const SignupPage = () => {
 
     if (password.length < 8) {
       setCurrentMeme(memes.incorrectPassword);
+      setMessage("Password chota hai bhaee")
     } else {
       setCurrentMeme(memes.correctPassword);
+      setMessage("Good Ho gya bhaee")
     }
   };
 
   const handleUserTypeChange = (event) => {
+    setMessage('')
 
     setUserType(event.target.value);
     setCurrentMeme(memes[event.target.value]);
@@ -87,6 +96,7 @@ const SignupPage = () => {
   };
 
   const handleRelationshipChange = (event) => {
+    setMessage('')
     setRelationshipStatus(event.target.value);
     setCurrentMeme(memes[event.target.value]);
   };
@@ -96,7 +106,7 @@ const SignupPage = () => {
     event.preventDefault(); // Prevent default form submission behavior
 
     if (name !== "" && email !== "" && password !== "") {
-      // Make an API call or perform any other actions on successful form submission
+      
       console.log("Form submitted successfully!");
       setCurrentMeme(memes.correctName); // Assuming success meme on submit
     } else {
@@ -125,6 +135,8 @@ const SignupPage = () => {
             />
           </div>
         )}
+
+        {message && <p className="text-red-500 text-center">{message}</p>}
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
