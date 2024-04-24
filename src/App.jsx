@@ -3,25 +3,25 @@ import { BsEmojiGrin } from "react-icons/bs";
 
 const memes = {
 
-  welcomeMeme: "../public/assets/Salam.mp4", // Initial video
+  welcomeMeme: "/assets/Salam.mp4", // Initial video
   incorrectName: "/assets/whatsThatBrother.mp4",
-  correctName: "../public/assets/CorrectName.mp4",
-  emptyEmail: "../public/assets/Batao Batao Na _ Meme Template _ Altaf Hussain.mp4",
-  correctEmail: "../public/assets/correctEmail.mp4",
-  incorrectEmail: "../public/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
-  incorrectPassword: '../public/assets/whatsThatBrother.mp4',
-  correctPassword: "../public/assets/JobHolder.mp4",
+  correctName: "/assets/CorrectName.mp4",
+  emptyEmail: "/assets/Batao Batao Na _ Meme Template _ Altaf Hussain.mp4",
+  correctEmail: "/assets/correctEmail.mp4",
+  incorrectEmail: "/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
+  incorrectPassword: '/assets/whatsThatBrother.mp4',
+  correctPassword: "/assets/JobHolder.mp4",
 
   // User Types
-  Hnyrr: "../public/assets/Confirm Jannati Ha _ Meme Template.mp4",
-  NiBhaii: "../public/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
+  Hnyrr: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
+  NiBhaii: "/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
   NiBataSakta: "../public/assets/Aap Wo Baat Kyu Puchte Ho _ Attaullah Khan _ Meme Template.mp4",
 
   // Material Status
-  single: "../public/assets/Confirm Jannati Ha _ Meme Template.mp4",
-  committed: "../public/assets/committed.mp4",
-  NibbaNibbi: "../public/assets/NibbaNibbi.mp4",
-  Broken: "../public/assets/Imrankhan.mp4",
+  single: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
+  committed: "/assets/committed.mp4",
+  NibbaNibbi: "/assets/NibbaNibbi.mp4",
+  Broken: "/assets/Imrankhan.mp4",
 };
 
 const SignupPage = () => {
