@@ -15,7 +15,7 @@ const memes = {
   // User Types
   Hnyrr: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
   NiBhaii: "/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
-  NiBataSakta: "../public/assets/Aap Wo Baat Kyu Puchte Ho _ Attaullah Khan _ Meme Template.mp4",
+  NiBataSakta: "/assets/Aap Wo Baat Kyu Puchte Ho _ Attaullah Khan _ Meme Template.mp4",
 
   // Material Status
   single: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
