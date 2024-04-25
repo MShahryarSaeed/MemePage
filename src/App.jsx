@@ -15,7 +15,7 @@ const memes = {
   // User Types
   Hnyrr: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
   NiBhaii: "/assets/Such Bolo _ Altaf Hussain _ Meme Template.mp4",
-  NiBataSakta: "/assets/Aap Wo Baat Kyu Puchte Ho _ Attaullah Khan _ Meme Template.mp4",
+  NiBataSakta: "/assets/ApWoBaatKuPochtyhen.mp4",
 
   // Material Status
   single: "/assets/Confirm Jannati Ha _ Meme Template.mp4",
@@ -37,15 +37,19 @@ const SignupPage = () => {
   const [currentMeme, setCurrentMeme] = useState('');
 
   const[message,setMessage]=useState("")
-  const [mute, setMute] = useState(true)
+
+  const [mute, setMute] = useState(true);
 
 
   useEffect(() => {
     if(currentMeme === "") {
-      setCurrentMeme(memes.welcomeMeme);
-      setTimeout(()=> setMute(false), 10000 );
+      setCurrentMeme(memes.welcomeMeme);  
+      setTimeout(()=> setMute(false),5000);
+      
     }
   }, [currentMeme])
+
+  
 
 
   const handleNameChange = (event) => {
@@ -152,7 +156,7 @@ const SignupPage = () => {
         {message && <p className="text-red-500 text-center">{message}</p>}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-2">
           <label className="block">
             <span className="text-sm font-medium text-gray-700">Name:</span>
             <input
