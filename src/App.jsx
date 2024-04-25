@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BsEmojiGrin } from "react-icons/bs";
+// import { BsEmojiGrin } from "react-icons/bs";
 
 const memes = {
 
@@ -34,10 +34,18 @@ const SignupPage = () => {
 
   const [relationshipStatus, setRelationshipStatus] = useState(null);
 
-  const [currentMeme, setCurrentMeme] = useState(memes.welcomeMeme);
+  const [currentMeme, setCurrentMeme] = useState('');
 
   const[message,setMessage]=useState("")
+  const [mute, setMute] = useState(true)
 
+
+  useEffect(() => {
+    if(currentMeme === "") {
+      setCurrentMeme(memes.welcomeMeme);
+      setTimeout(()=> setMute(false), 10000 );
+    }
+  }, [currentMeme])
 
 
   const handleNameChange = (event) => {
@@ -108,9 +116,11 @@ const SignupPage = () => {
     if (name !== "" && email !== "" && password !== "") {
       
       console.log("Form submitted successfully!");
+      setMessage("Aj k liye bss itna hi")
       setCurrentMeme(memes.correctName); // Assuming success meme on submit
     } else {
       setCurrentMeme(memes.emptyEmail); // Display empty field meme on submit if any field is empty
+      setMessage("Sari  fields Fill ker")
     }
   };
 
@@ -129,10 +139,13 @@ const SignupPage = () => {
           <div className="mx-auto   w-full sm:w-1/2">
             <video
               autoPlay
+              muted={mute}
               className=" w-full h-full "
               onError={() => setCurrentMeme(memes.welcomeMeme)}
               src={currentMeme}
+              
             />
+            
           </div>
         )}
 
