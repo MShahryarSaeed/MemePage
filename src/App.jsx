@@ -257,7 +257,7 @@ const SignupPage = () => {
                   onChange={handleRelationshipChange}
                   className="w-4 h-4 mr-2 text-blue-500 rounded-full border-gray-300 focus:ring-0 focus:outline-none"
                 />
-                <span className="text-gray-700">Nibba/Nibbi</span>
+                <span className="text-gray-700">NibbaNibbi</span>
               </label>
               <label className="flex items-center">
                 <input
